@@ -1,5 +1,10 @@
 apply plugin: 'java'
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    def dependencies = rootProject.ext.tmdb
+
+    compile dependencies.retrofit
+    compile dependencies.retrofitAdapter
+    compile dependencies.retrofitConverter
+    compile dependencies.rxJava
 }
