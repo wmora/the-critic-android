@@ -2,7 +2,7 @@ package com.nispok.tmdb;
 
 import java.util.List;
 
-final class MovieResults {
+public final class MovieResults {
 
     private int page;
     private long totalPages;

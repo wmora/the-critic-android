@@ -2,7 +2,7 @@ package com.nispok.tmdb;
 
 import java.util.Date;
 
-final class Movie {
+public final class Movie {
 
     private String id;
     private String originalLanguage;

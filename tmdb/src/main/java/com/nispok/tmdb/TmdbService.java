@@ -4,7 +4,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 import rx.Observable;
 
-interface TmdbService {
+public interface TmdbService {
 
     /**
      * Get the list of movies playing that have been, or are being released this week.
