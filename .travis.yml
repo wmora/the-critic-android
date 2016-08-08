@@ -1,8 +1,0 @@
-language: android
-
-android:
-  components:
-    - tools
-
-script:
- - ./gradlew tmdb:build
