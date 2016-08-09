@@ -19,6 +19,7 @@ ext {
 
     app = [
             appCompat: "com.android.support:appcompat-v7:${supportLibraryVersion}",
+            supportV4: "com.android.support:support-v4:${supportLibraryVersion}",
             recyclerView: "com.android.support:recyclerview-v7:${supportLibraryVersion}",
             junit: "junit:junit:${junitVersion}"
     ]

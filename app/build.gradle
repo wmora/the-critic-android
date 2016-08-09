@@ -26,6 +26,7 @@ dependencies {
 
     compile dependencies.appCompat
     compile dependencies.recyclerView
+    compile dependencies.supportV4
 
     testCompile dependencies.junit
 }
