@@ -14,4 +14,6 @@ dependencies {
     compile dependencies.retrofitAdapter
     compile dependencies.retrofitConverter
     compile dependencies.rxJava
+    compile dependencies.okHttp
+    compile dependencies.okHttpLoggingInterceptor
 }

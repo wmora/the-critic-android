@@ -9,12 +9,15 @@ ext {
     rxJavaVersion = "1.1.8"
     supportLibraryVersion = "24.1.1"
     junitVersion = "4.12"
+    okHttpVersion = "3.4.1"
 
     tmdb = [
             retrofit: "com.squareup.retrofit2:retrofit:${retrofitVersion}",
             retrofitAdapter: "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
             retrofitConverter: "com.squareup.retrofit2:converter-moshi:${retrofitVersion}",
-            rxJava: "io.reactivex:rxjava:${rxJavaVersion}"
+            rxJava: "io.reactivex:rxjava:${rxJavaVersion}",
+            okHttp: "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            okHttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}"
     ]
 
     app = [
