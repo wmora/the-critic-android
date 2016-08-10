@@ -13,20 +13,20 @@ ext {
     okHttpVersion = "3.4.1"
 
     tmdb = [
-            retrofit: "com.squareup.retrofit2:retrofit:${retrofitVersion}",
-            retrofitAdapter: "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
-            retrofitConverter: "com.squareup.retrofit2:converter-moshi:${retrofitVersion}",
-            rxJava: "io.reactivex:rxjava:${rxJavaVersion}",
-            okHttp: "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            retrofit                : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitAdapter         : "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
+            retrofitConverter       : "com.squareup.retrofit2:converter-moshi:${retrofitVersion}",
+            rxJava                  : "io.reactivex:rxjava:${rxJavaVersion}",
+            okHttp                  : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
             okHttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}"
     ]
 
     app = [
-            appCompat: "com.android.support:appcompat-v7:${supportLibraryVersion}",
-            supportV4: "com.android.support:support-v4:${supportLibraryVersion}",
+            appCompat   : "com.android.support:appcompat-v7:${supportLibraryVersion}",
+            supportV4   : "com.android.support:support-v4:${supportLibraryVersion}",
             recyclerView: "com.android.support:recyclerview-v7:${supportLibraryVersion}",
-            rxAndroid: "io.reactivex:rxandroid:${rxAndroidVersion}",
-            junit: "junit:junit:${junitVersion}"
+            rxAndroid   : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            junit       : "junit:junit:${junitVersion}"
     ]
 
 }
