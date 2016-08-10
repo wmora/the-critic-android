@@ -15,7 +15,7 @@ ext {
     tmdb = [
             retrofit                : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
             retrofitAdapter         : "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
-            retrofitConverter       : "com.squareup.retrofit2:converter-moshi:${retrofitVersion}",
+            retrofitConverter       : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
             rxJava                  : "io.reactivex:rxjava:${rxJavaVersion}",
             okHttp                  : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
             okHttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}"
