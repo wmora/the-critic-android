@@ -11,6 +11,7 @@ ext {
     supportLibraryVersion = "24.1.1"
     junitVersion = "4.12"
     okHttpVersion = "3.4.1"
+    picassoVersion = "2.5.2"
 
     tmdb = [
             retrofit                : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
@@ -25,6 +26,7 @@ ext {
             appCompat   : "com.android.support:appcompat-v7:${supportLibraryVersion}",
             supportV4   : "com.android.support:support-v4:${supportLibraryVersion}",
             recyclerView: "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+            picasso     : "com.squareup.picasso:picasso:${picassoVersion}",
             rxAndroid   : "io.reactivex:rxandroid:${rxAndroidVersion}",
             junit       : "junit:junit:${junitVersion}"
     ]
