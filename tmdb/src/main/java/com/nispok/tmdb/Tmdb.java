@@ -8,7 +8,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory;
 
 public class Tmdb {
 
-    private static final String BASE_URL = "https://api.themoviedb.org/3";
+    private static final String BASE_URL = "https://api.themoviedb.org/3/";
 
     private TmdbService service;
 
