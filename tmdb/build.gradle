@@ -1,4 +1,11 @@
-apply plugin: 'java'
+apply plugin: "java"
+
+def javaVersion = "1.7"
+
+compileJava {
+    sourceCompatibility = javaVersion
+    targetCompatibility = javaVersion
+}
 
 dependencies {
     def dependencies = rootProject.ext.tmdb
