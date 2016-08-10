@@ -7,6 +7,7 @@ allprojects {
 ext {
     retrofitVersion = "2.1.0"
     rxJavaVersion = "1.1.8"
+    rxAndroidVersion = "1.2.1"
     supportLibraryVersion = "24.1.1"
     junitVersion = "4.12"
     okHttpVersion = "3.4.1"
@@ -24,6 +25,7 @@ ext {
             appCompat: "com.android.support:appcompat-v7:${supportLibraryVersion}",
             supportV4: "com.android.support:support-v4:${supportLibraryVersion}",
             recyclerView: "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+            rxAndroid: "io.reactivex:rxandroid:${rxAndroidVersion}",
             junit: "junit:junit:${junitVersion}"
     ]
 
