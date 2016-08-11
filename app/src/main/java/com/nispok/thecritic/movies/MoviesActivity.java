@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.nispok.thecritic.R;
+import com.nispok.thecritic.data.TmdbModule;
 
 import javax.inject.Inject;
 
@@ -25,6 +26,7 @@ public class MoviesActivity extends AppCompatActivity {
                 .commit();
 
         DaggerMoviesComponent.builder()
+                .tmdbModule(new TmdbModule())
                 .moviesPresenterModule(new MoviesPresenterModule(moviesFragment)).build()
                 .inject(this);
     }

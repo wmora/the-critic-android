@@ -13,11 +13,12 @@ import rx.schedulers.Schedulers;
 
 public class MoviesPresenter implements MoviesContract.Presenter {
 
-    private Tmdb tmdb = new Tmdb();
+    private Tmdb tmdb;
     private MoviesContract.View view;
 
     @Inject
-    MoviesPresenter(MoviesContract.View view) {
+    MoviesPresenter(Tmdb tmdb, MoviesContract.View view) {
+        this.tmdb = tmdb;
         this.view = view;
     }
 
