@@ -1,7 +1,7 @@
 package com.nispok.thecritic.movies;
 
-import com.nispok.thecritic.BasePresenter;
-import com.nispok.thecritic.BaseView;
+import com.nispok.thecritic.base.BasePresenter;
+import com.nispok.thecritic.base.BaseView;
 import com.nispok.tmdb.Movie;
 
 import java.util.List;

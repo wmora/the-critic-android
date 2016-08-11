@@ -1,4 +1,4 @@
-package com.nispok.thecritic;
+package com.nispok.thecritic.base;
 
 public interface BaseView<T> {
 
