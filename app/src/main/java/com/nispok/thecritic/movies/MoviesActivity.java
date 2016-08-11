@@ -1,12 +1,16 @@
-package com.nispok.thecritic.activities;
+package com.nispok.thecritic.movies;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.nispok.thecritic.R;
-import com.nispok.thecritic.fragments.MoviesFragment;
+
+import javax.inject.Inject;
 
 public class MoviesActivity extends AppCompatActivity {
+
+    @Inject
+    MoviesPresenter moviesPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,5 +23,9 @@ public class MoviesActivity extends AppCompatActivity {
                 .beginTransaction()
                 .replace(R.id.container, moviesFragment)
                 .commit();
+
+        DaggerMoviesComponent.builder()
+                .moviesPresenterModule(new MoviesPresenterModule(moviesFragment)).build()
+                .inject(this);
     }
 }

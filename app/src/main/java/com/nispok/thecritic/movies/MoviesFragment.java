@@ -1,6 +1,7 @@
-package com.nispok.thecritic.fragments;
+package com.nispok.thecritic.movies;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -10,23 +11,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import com.nispok.thecritic.BuildConfig;
 import com.nispok.thecritic.R;
-import com.nispok.thecritic.adapters.MoviesRecyclerViewAdapter;
-import com.nispok.tmdb.MovieResults;
-import com.nispok.tmdb.Tmdb;
+import com.nispok.thecritic.movies.adapters.MoviesRecyclerViewAdapter;
+import com.nispok.tmdb.Movie;
 
-import rx.Observable;
-import rx.Observer;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
+import java.util.List;
 
-public class MoviesFragment extends Fragment {
-
-    private Tmdb tmdb = new Tmdb();
+public class MoviesFragment extends Fragment implements MoviesContract.View {
 
     private FrameLayout loadingView;
     private MoviesRecyclerViewAdapter adapter;
+
+    private MoviesContract.Presenter presenter;
 
     public static MoviesFragment newInstance() {
         return new MoviesFragment();
@@ -48,40 +44,26 @@ public class MoviesFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        showLoading();
-        loadMovies();
+        presenter.start();
     }
 
-    private void loadMovies() {
-        Observable<MovieResults> movies = tmdb.getService()
-                .nowPlayingMovies(BuildConfig.TMDB_API_KEY, 1, "en")
-                .subscribeOn(Schedulers.newThread())
-                .observeOn(AndroidSchedulers.mainThread());
-        movies.subscribe(new Observer<MovieResults>() {
-            @Override
-            public void onCompleted() {
-
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onNext(MovieResults movieResults) {
-                adapter.add(movieResults.getResults());
-                hideLoading();
-            }
-        });
-    }
-
-    private void showLoading() {
+    @Override
+    public void showLoading() {
         loadingView.setVisibility(View.VISIBLE);
     }
 
-    private void hideLoading() {
+    @Override
+    public void hideLoading() {
         loadingView.setVisibility(View.GONE);
     }
 
+    @Override
+    public void showMovies(List<Movie> movies) {
+        adapter.add(movies);
+    }
+
+    @Override
+    public void setPresenter(@NonNull MoviesContract.Presenter presenter) {
+        this.presenter = presenter;
+    }
 }

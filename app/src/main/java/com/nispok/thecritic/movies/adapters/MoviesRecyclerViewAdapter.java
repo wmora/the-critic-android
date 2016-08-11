@@ -1,4 +1,4 @@
-package com.nispok.thecritic.adapters;
+package com.nispok.thecritic.movies.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.nispok.thecritic.R;
-import com.nispok.thecritic.adapters.vh.MovieViewHolder;
 import com.nispok.tmdb.Movie;
 import com.squareup.picasso.Picasso;
 

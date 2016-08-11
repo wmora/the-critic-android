@@ -1,4 +1,4 @@
-package com.nispok.thecritic.adapters.vh;
+package com.nispok.thecritic.movies.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
