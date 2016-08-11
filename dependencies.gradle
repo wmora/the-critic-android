@@ -12,6 +12,7 @@ ext {
     junitVersion = "4.12"
     okHttpVersion = "3.4.1"
     picassoVersion = "2.5.2"
+    daggerVersion = "2.6"
 
     tmdb = [
             retrofit                : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
@@ -28,6 +29,8 @@ ext {
             recyclerView: "com.android.support:recyclerview-v7:${supportLibraryVersion}",
             picasso     : "com.squareup.picasso:picasso:${picassoVersion}",
             rxAndroid   : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            dagger      : "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler      : "com.google.dagger:dagger-compiler:${daggerVersion}",
             junit       : "junit:junit:${junitVersion}"
     ]
 
