@@ -1,4 +1,4 @@
-package com.nispok.thecritic.movies.adapters;
+package com.nispok.thecritic.movies;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -13,7 +13,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MoviesRecyclerViewAdapter extends RecyclerView.Adapter<MovieViewHolder> {
+class MoviesRecyclerViewAdapter extends RecyclerView.Adapter<MovieViewHolder> {
 
     private List<Movie> movies;
     private MovieListener listener;

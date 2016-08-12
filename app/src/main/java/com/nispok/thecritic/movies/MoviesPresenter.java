@@ -14,7 +14,7 @@ import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-public class MoviesPresenter implements MoviesContract.Presenter {
+class MoviesPresenter implements MoviesContract.Presenter {
 
     private static final String TAG = MoviesPresenter.class.getName();
 

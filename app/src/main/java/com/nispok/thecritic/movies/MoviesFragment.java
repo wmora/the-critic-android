@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import com.nispok.thecritic.R;
-import com.nispok.thecritic.movies.adapters.MoviesRecyclerViewAdapter;
 import com.nispok.tmdb.Movie;
 
 import java.util.List;

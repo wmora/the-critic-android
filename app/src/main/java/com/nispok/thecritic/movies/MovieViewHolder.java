@@ -1,4 +1,4 @@
-package com.nispok.thecritic.movies.adapters;
+package com.nispok.thecritic.movies;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import com.nispok.thecritic.R;
 import com.nispok.tmdb.Movie;
 
-public class MovieViewHolder extends RecyclerView.ViewHolder {
+class MovieViewHolder extends RecyclerView.ViewHolder {
 
     private final View container;
     private final ImageView image;
