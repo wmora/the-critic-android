@@ -17,7 +17,8 @@ import com.nispok.tmdb.Movie;
 
 import java.util.List;
 
-public class MoviesFragment extends Fragment implements MoviesContract.View {
+public class MoviesFragment extends Fragment implements MoviesContract.View,
+        MoviesRecyclerViewAdapter.MovieListener {
 
     private FrameLayout loadingView;
     private MoviesRecyclerViewAdapter adapter;
@@ -35,7 +36,7 @@ public class MoviesFragment extends Fragment implements MoviesContract.View {
         View view = inflater.inflate(R.layout.fragment_movies, container, false);
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.movies_recycler_view);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-        adapter = new MoviesRecyclerViewAdapter();
+        adapter = new MoviesRecyclerViewAdapter(this);
         recyclerView.setAdapter(adapter);
         loadingView = (FrameLayout) view.findViewById(R.id.loading_view);
         return view;
@@ -65,5 +66,10 @@ public class MoviesFragment extends Fragment implements MoviesContract.View {
     @Override
     public void setPresenter(@NonNull MoviesContract.Presenter presenter) {
         this.presenter = presenter;
+    }
+
+    @Override
+    public void onMovieSelected(Movie movie) {
+        presenter.movieSelected(movie);
     }
 }

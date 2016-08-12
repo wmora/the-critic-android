@@ -1,6 +1,9 @@
 package com.nispok.thecritic.movies;
 
+import android.util.Log;
+
 import com.nispok.thecritic.BuildConfig;
+import com.nispok.tmdb.Movie;
 import com.nispok.tmdb.MovieResults;
 import com.nispok.tmdb.Tmdb;
 
@@ -12,6 +15,8 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 public class MoviesPresenter implements MoviesContract.Presenter {
+
+    private static final String TAG = MoviesPresenter.class.getName();
 
     private Tmdb tmdb;
     private MoviesContract.View view;
@@ -55,5 +60,10 @@ public class MoviesPresenter implements MoviesContract.Presenter {
                 view.hideLoading();
             }
         });
+    }
+
+    @Override
+    public void movieSelected(Movie movie) {
+        Log.d(TAG, "Movie selected: " + movie.getTitle());
     }
 }

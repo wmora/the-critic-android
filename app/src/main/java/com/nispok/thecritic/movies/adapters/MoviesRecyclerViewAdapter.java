@@ -1,7 +1,7 @@
 package com.nispok.thecritic.movies.adapters;
 
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,10 +15,11 @@ import java.util.List;
 
 public class MoviesRecyclerViewAdapter extends RecyclerView.Adapter<MovieViewHolder> {
 
-    private static final String TAG = MoviesRecyclerViewAdapter.class.getName();
-    List<Movie> movies;
+    private List<Movie> movies;
+    private MovieListener listener;
 
-    public MoviesRecyclerViewAdapter() {
+    public MoviesRecyclerViewAdapter(@NonNull MovieListener listener) {
+        this.listener = listener;
         movies = new ArrayList<>();
     }
 
@@ -40,7 +41,7 @@ public class MoviesRecyclerViewAdapter extends RecyclerView.Adapter<MovieViewHol
         holder.getContainer().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "Movie selected: " + movie.getTitle());
+                listener.onMovieSelected(movie);
             }
         });
         String imageBaseUrl = "http://image.tmdb.org/t/p/original" + movie.getPosterPath();
@@ -56,4 +57,7 @@ public class MoviesRecyclerViewAdapter extends RecyclerView.Adapter<MovieViewHol
         return movies.size();
     }
 
+    public interface MovieListener {
+        void onMovieSelected(Movie movie);
+    }
 }
