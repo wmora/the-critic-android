@@ -13,6 +13,8 @@ interface MoviesContract {
 
         void hideLoading();
 
+        void showError(String message);
+
         void showMovies(List<Movie> movies);
     }
 

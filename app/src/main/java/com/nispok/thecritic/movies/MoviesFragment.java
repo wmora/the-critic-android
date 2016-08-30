@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,8 @@ import java.util.List;
 
 public class MoviesFragment extends Fragment implements MoviesContract.View,
         MoviesRecyclerViewAdapter.MovieListener {
+
+    private static final String TAG = MoviesFragment.class.getName();
 
     private FrameLayout loadingView;
     private MoviesRecyclerViewAdapter adapter;
@@ -55,6 +58,11 @@ public class MoviesFragment extends Fragment implements MoviesContract.View,
     @Override
     public void hideLoading() {
         loadingView.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void showError(String message) {
+        Log.e(TAG, message);
     }
 
     @Override
