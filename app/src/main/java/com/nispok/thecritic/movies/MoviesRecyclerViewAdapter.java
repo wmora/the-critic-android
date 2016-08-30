@@ -44,10 +44,9 @@ class MoviesRecyclerViewAdapter extends RecyclerView.Adapter<MovieViewHolder> {
                 listener.onMovieSelected(movie);
             }
         });
-        String imageBaseUrl = "http://image.tmdb.org/t/p/original" + movie.getPosterPath();
 
         Picasso.with(holder.getContainer().getContext())
-                .load(imageBaseUrl)
+                .load(movie.getPosterUrl())
                 .error(R.mipmap.ic_launcher)
                 .into(holder.getImage());
     }
