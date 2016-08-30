@@ -70,10 +70,13 @@ class MoviesPresenter implements MoviesContract.Presenter {
                     public MovieResults call(MovieResults movieResults) {
                         String posterBaseUrl = configuration.getImages().getBaseUrl()
                                 + configuration.getImages().getPosterSizes().get(
-                                configuration.getImages().getPosterSizes().size() - 1);
+                                configuration.getImages().getPosterSizes().size() - 2);
+                        String backdropBaseUrl = configuration.getImages().getBaseUrl()
+                                + configuration.getImages().getBackdropSizes().get(
+                                configuration.getImages().getBackdropSizes().size() - 2);
                         for (Movie movie : movieResults.getResults()) {
                             movie.setPosterUrl(posterBaseUrl + movie.getPosterPath());
-                            movie.setBackdropUrl(posterBaseUrl + movie.getBackdropPath());
+                            movie.setBackdropUrl(backdropBaseUrl + movie.getBackdropPath());
                         }
                         return movieResults;
                     }
