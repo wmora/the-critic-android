@@ -9,6 +9,8 @@ public final class Movie {
     private String originalTitle;
     private String overview;
     private Date releaseDate;
+    private String backdropPath;
+    private String backdropUrl;
     private String posterPath;
     private String posterUrl;
     private String title;
@@ -51,6 +53,22 @@ public final class Movie {
 
     public void setReleaseDate(Date releaseDate) {
         this.releaseDate = releaseDate;
+    }
+
+    public String getBackdropPath() {
+        return backdropPath;
+    }
+
+    public void setBackdropPath(String backdropPath) {
+        this.backdropPath = backdropPath;
+    }
+
+    public String getBackdropUrl() {
+        return backdropUrl;
+    }
+
+    public void setBackdropUrl(String backdropUrl) {
+        this.backdropUrl = backdropUrl;
     }
 
     public String getPosterPath() {
