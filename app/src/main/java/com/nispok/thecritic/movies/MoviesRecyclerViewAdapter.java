@@ -38,6 +38,8 @@ class MoviesRecyclerViewAdapter extends RecyclerView.Adapter<MovieViewHolder> {
     public void onBindViewHolder(MovieViewHolder holder, int position) {
         final Movie movie = movies.get(position);
         holder.setMovie(movie);
+        holder.getTitle().setText(movie.getTitle());
+        holder.getSubtitle().setText(movie.getOverview());
         holder.getContainer().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
