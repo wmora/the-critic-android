@@ -73,7 +73,7 @@ class MoviesPresenter implements MoviesContract.Presenter {
                                 configuration.getImages().getPosterSizes().size() - 1);
                         for (Movie movie : movieResults.getResults()) {
                             movie.setPosterUrl(posterBaseUrl + movie.getPosterPath());
-                            movie.setBackdropPath(posterBaseUrl + movie.getBackdropPath());
+                            movie.setBackdropUrl(posterBaseUrl + movie.getBackdropPath());
                         }
                         return movieResults;
                     }

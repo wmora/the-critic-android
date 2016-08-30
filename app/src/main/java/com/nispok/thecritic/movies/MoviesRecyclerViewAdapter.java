@@ -46,7 +46,7 @@ class MoviesRecyclerViewAdapter extends RecyclerView.Adapter<MovieViewHolder> {
         });
 
         Picasso.with(holder.getContainer().getContext())
-                .load(movie.getPosterUrl())
+                .load(movie.getBackdropUrl())
                 .error(R.mipmap.ic_launcher)
                 .into(holder.getImage());
     }
