@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="padding_small">4dp</dimen>
-    <dimen name="backdrops_margin">4dp</dimen>
+    <dimen name="movie_margin">8dp</dimen>
     <dimen name="backdrop_height">280dp</dimen>
     <dimen name="text_size_1">16sp</dimen>
     <dimen name="text_size_2">14sp</dimen>

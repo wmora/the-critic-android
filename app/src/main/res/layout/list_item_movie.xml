@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/backdrops_margin"
-    android:layout_marginTop="@dimen/backdrops_margin"
+    android:layout_marginBottom="@dimen/movie_margin"
+    android:layout_marginTop="@dimen/movie_margin"
     android:orientation="vertical">
 
     <ImageView
