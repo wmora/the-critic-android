@@ -10,6 +10,7 @@ public final class Movie {
     private String overview;
     private Date releaseDate;
     private String posterPath;
+    private String posterUrl;
     private String title;
 
     public String getId() {
@@ -58,6 +59,14 @@ public final class Movie {
 
     public void setPosterPath(String posterPath) {
         this.posterPath = posterPath;
+    }
+
+    public String getPosterUrl() {
+        return posterUrl;
+    }
+
+    public void setPosterUrl(String posterUrl) {
+        this.posterUrl = posterUrl;
     }
 
     public String getTitle() {
